@@ -1,4 +1,4 @@
-package com.nullpointerxception.accountstest;
+package com.nullpointerxception.accounts;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
