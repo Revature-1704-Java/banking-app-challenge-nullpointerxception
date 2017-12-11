@@ -3,8 +3,8 @@ package com.nullpointerxception;
 import java.awt.ScrollPaneAdjustable;
 import java.util.Scanner;
 
-import com.nullpointerxception.accounts.AccountsEnum;
-import com.nullpointerxception.accounts.AccountsManager;
+import com.nullpointerxception.accounts.*;
+
 
 public class App 
 {
@@ -22,7 +22,7 @@ public class App
             viewAccount();
         }
 
-        
+        scanner.close();
         
         
             
@@ -65,7 +65,7 @@ public class App
         while(true){
             input = scanner.nextLine();
             if(input.equals("1")){
-                System.out.println("Enter deposite amount:");
+                System.out.println("Enter deposit amount:");
                 while(true){
                     input = scanner.nextLine();
                     try{
@@ -78,8 +78,8 @@ public class App
                         System.out.println("Success.\nAccount # " + accountsManager.getAccountNum() + "\n1.Deposit\n2.Withdraw\n3.View Balance\4.Quit");
                         break;
                     }else{
-                        System.out.println("Unable to withdraw. Account # " + accountsManager.getAccountNum() + "\n1.Deposit\n2.Withdraw\n3.View Balance\n4.Quit");
-                        
+                        System.out.println("Unable to deposit. Account # " + accountsManager.getAccountNum() + "\n1.Deposit\n2.Withdraw\n3.View Balance\n4.Quit");
+                        break;
                     }
                 }
 
